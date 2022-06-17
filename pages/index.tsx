@@ -10,12 +10,18 @@ import { providers } from "ethers"
 import Head from "next/head"
 import React from "react"
 import styles from "../styles/Home.module.css"
-
+import Link from "next/link"
 // importing additional packages for the form, yup validation
 // and having yup play nicely with the form hook
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+// import {
+//     BrowserRouter as Router,
+//     Switch,
+//     Route,
+//     Link
+// } from "react-router-dom"
 
 // Using Yup to develop a schema, where each item we require for
 // our form (name, age, address), is validated with the correct
@@ -24,9 +30,11 @@ const schema = yup.object().shape({
     name: yup.string().required(),
     age: yup.number().required().positive().integer(),
     address: yup.string().required(),
-  });  
+  }); 
+
 
 export default function Home() {
+
     const [logs, setLogs] = React.useState("Connect your wallet and greet!")
     const [greets, setGreets] = React.useState("Greetings will go here")
     const { register, handleSubmit, formState: { errors }, reset } = useForm({resolver: yupResolver(schema)});
@@ -99,7 +107,7 @@ export default function Home() {
             
             {/* First, we set the title of the page.*/}
             <Head>
-                <title>cypg's Greetings</title>
+                <title>cypg's zKuiz</title>
                 <meta name="description" content="A simple Next.js/Hardhat privacy application with Semaphore." />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -108,37 +116,53 @@ export default function Home() {
 
             {/* Then we start adding content to the page itself, starting
             with the greeting! */}
-            <h1 className={styles.title}>cypg's Greetings!</h1>
 
+            <h1 className={styles.title}>zKuiz</h1>
+            <h2>
+            <Link href="create-kuiz">
+                <a className={styles.link}>Create a Kuiz</a>
+            </Link>
+            </h2>
+            <h2>
+            <Link href="take-kuiz">
+                <a>Take a Kuiz</a>
+            </Link>
+            </h2>
+            <h2>
+            <Link href="kuiz-results">
+                <a>Kuiz results</a>
+            </Link>
+            </h2>
+                
                 {/* The first part will be based off of the Semaphore
                 boilerplate, with minor modifications as described below. */}
-                <p className={styles.description}>A simple Next.js/Hardhat privacy application with Semaphore.</p>
+                {/* <p className={styles.description}>A simple classroom/quiz project secured by ZKPS.</p> */}
 
                 <div className={styles.logs}>{logs}</div>
 
                 <div onClick={() => greet()} className={styles.button}>
-                    Greet
+                    Connect wallet
                 </div>
 
                 {/* This textbox listens for new greetings, and changes the box based on the new greetings made. (Part 3.2.3) */}
                 <div className={styles.logs}>{greets}</div>
 
                 {/* Now, we create a form which logs the information to the console in JSON format.*/}
-                <p>Below is a simple form that will take your name, age, and address and log the JSON form of it to the console. Note that values are validated for proper input (e.g. positive integers for age). After submitting the form, the fields will reset. </p>
+                {/* <p>Below is a simple form that will take your name, age, and address and log the JSON form of it to the console. Note that values are validated for proper input (e.g. positive integers for age). After submitting the form, the fields will reset. </p>
 
                 <form onSubmit={handleSubmit(onSubmitHandler)} className={styles.description}>
                     {/* This textbox is for the name, and requires a string. */}
-                    <input {...register("name")} placeholder="Your name" type="string" required/>
+                    {/* <input {...register("name")} placeholder="Your name" type="string" required/>
                     <p>{errors.name?.message}</p>
                     {/* This textbox is for the age, and requires a positive integer */}
-                    <input {...register("age")} placeholder="Age" type="number" required/>
-                    <p>{errors.age?.message}</p>
+                    {/* <input {...register("age")} placeholder="Age" type="number" required/> */}
+                    {/* <p>{errors.age?.message}</p> */}
                     {/* This textbox is for the address, and requires a string. */}
-                    <input {...register("address")} placeholder="Your address" type="string" required/>
-                    <p className={styles.log}>{errors.address?.message}</p>
+                    {/* <input {...register("address")} placeholder="Your address" type="string" required/> */}
+                    {/* <p className={styles.log}>{errors.address?.message}</p> */}
                     {/* This button submits the information from the form.*/}
-                    <button type="submit" className={styles.button}>Button</button>
-                </form>
+                    {/* <button type="submit" className={styles.button}>Button</button> */}
+                {/* </form> */} 
             </main>
         </div>
     )
