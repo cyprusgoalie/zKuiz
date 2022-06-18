@@ -1,36 +1,21 @@
 <p align="center">
     <h1 align="center">
-      <img width="40" src="https://github.com/semaphore-protocol/docs/blob/main/static/img/semaphore-icon.svg">  
-      Semaphore Boilerplate
+      zKuiz
     </h1>
-    <p align="center">A simple Next.js/Hardhat privacy application with <a href="https://github.com/appliedzkp/semaphore">Semaphore</a>.</p>
+    <p align="center">A simple quiz building protocol forked from ZKU projects <a href="https://talk.harmony.one/t/ninja-survey-a-dao-tooling-platform-for-anonymous-survey-with-zk/15133">Survey Ninja</a> and <a href="https://talk.harmony.one/t/zk-survey-anonymous-survey-application/19477">ZK Survey</a>, with a little bit of Semaphore <a href="https://github.com/semaphore-protocol/semaphore">Semaphore</a>.</p>
 </p>
 
-<p align="center">
-    <a href="https://github.com/cedoor/semaphore-boilerplate/blob/main/LICENSE">
-        <img alt="Github license" src="https://img.shields.io/github/license/cedoor/semaphore-boilerplate.svg?style=flat-square">
-    </a>
-    <a href="https://nextjs.org/">
-        <img alt="Next.js" src="https://img.shields.io/badge/framework-nextjs-393a2a?style=flat-square">
-    </a>
-    <a href="https://hardhat.org/">
-        <img alt="Hardhat" src="https://img.shields.io/badge/contracts-hardhat-afb719?style=flat-square">
-    </a>
-</p>
+## Description
 
-The code can be divided into contracts, frontend and backend.
-
-* [Greeters.sol](https://github.com/cedoor/semaphore-boilerplate/blob/main/contracts/Greeters.sol) contains the root of an offchain Merkle tree to represent the greeters (tree leaves), i.e. the identity commitments generated using the first 3 Ethereum accounts of the Hardhat testing wallet. It also contains a simple function to allow greeters to greet, only once and only if they create a valid Semaphore proof.
-* The [frontend code](https://github.com/cedoor/semaphore-boilerplate/blob/main/pages/index.tsx) allows greeters to create a Semaphore identity with a signed Metamask message (using one of the first 3 Hardhat accounts) and a valid zero-knowledge proof.
-* The [backend code](https://github.com/cedoor/semaphore-boilerplate/blob/main/pages/api/greet.ts) is an API that sends a `greet` transaction signed by the contract owner with the zero-knowledge proof of a greeter.
+Blockchain technologies and zero-knowledge proofs could fundamentally impact multiple sectors of everyday life, including education. Currently, educational applications of blockchain, like on-chain testing, is still in its infancy, but there is room to grow! zKuiz is a small ``proof of concept'' project to implement on-chain quizes, with privacy secured by the "moon math" of zero-knowledge proofs. zKuiz was developed as a final project for ZKU's cohort 3. 
 
 ## 🛠 Install
 
 Clone this repository and install the dependencies:
 
 ```bash
-git clone https://github.com/cedoor/semaphore-boilerplate.git
-cd semaphore-boilerplate
+git clone https://github.com/cyprusgoalie/zKuiz.git
+cd zKuiz
 yarn
 ```
 
