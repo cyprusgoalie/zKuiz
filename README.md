@@ -2,12 +2,12 @@
     <h1 align="center">
       zKuiz
     </h1>
-    <p align="center">A simple quiz building protocol forked from ZKU projects <a href="https://talk.harmony.one/t/ninja-survey-a-dao-tooling-platform-for-anonymous-survey-with-zk/15133">Survey Ninja</a> and <a href="https://talk.harmony.one/t/zk-survey-anonymous-survey-application/19477">ZK Survey</a>, with a little bit of Semaphore <a href="https://github.com/semaphore-protocol/semaphore">Semaphore</a>.</p>
+    <p align="center">A simple quiz building protocol forked from ZKU projects <a href="https://talk.harmony.one/t/ninja-survey-a-dao-tooling-platform-for-anonymous-survey-with-zk/15133">Survey Ninja</a> and <a href="https://talk.harmony.one/t/zk-survey-anonymous-survey-application/19477">ZK Survey</a>, with a little bit of <a href="https://github.com/semaphore-protocol/semaphore">Semaphore</a>.</p>
 </p>
 
 ## Description
 
-Blockchain technologies and zero-knowledge proofs could fundamentally impact multiple sectors of everyday life, including education. Currently, educational applications of blockchain, like on-chain testing, is still in its infancy, but there is room to grow! zKuiz is a small ``proof of concept'' project to implement on-chain quizes, with privacy secured by the "moon math" of zero-knowledge proofs. zKuiz was developed as a final project for ZKU's cohort 3. 
+Blockchain technologies and zero-knowledge proofs could fundamentally impact multiple sectors of everyday life, including education. Currently, educational applications of blockchain, like on-chain testing, is still in its infancy, but there is room to grow! zKuiz is a small "proof of concept" project to implement on-chain quizes, with privacy secured by the "moon math" of zero-knowledge proofs. zKuiz was developed as a final project for ZKU's cohort 3. 
 
 ## 🛠 Install
 

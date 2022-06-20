@@ -35,8 +35,12 @@ const schema = yup.object().shape({
 
 export default function Home() {
 
-    const [logs, setLogs] = React.useState("Connect your wallet and greet!")
-    const [greets, setGreets] = React.useState("Greetings will go here")
+    const [logs, setLogs] = React.useState("")
+    const [greets, setGreets] = React.useState("")
+    const [createText, setCreate] = React.useState("")
+    const [takeText, setTake] = React.useState("")
+    const [resultsText, setResults] = React.useState("")
+
     const { register, handleSubmit, formState: { errors }, reset } = useForm({resolver: yupResolver(schema)});
     
     // when we submit the form data, log the JSON of the data to the console
@@ -99,6 +103,9 @@ export default function Home() {
             setLogs("Your anonymous greeting is onchain :)")
             // Setting our greeting textbox, when a new greeting is initiated
             setGreets(greeting)
+            setCreate("Create a Kuiz")
+            setTake("Take a Kuiz")
+            setResults("Kuiz results)")
         }
     }
 
@@ -120,17 +127,17 @@ export default function Home() {
             <h1 className={styles.title}>zKuiz</h1>
             <h2>
             <Link href="create-kuiz">
-                <a className={styles.link}>Create a Kuiz</a>
+                <a className={styles.link}>{createText}</a>
             </Link>
             </h2>
             <h2>
             <Link href="take-kuiz">
-                <a>Take a Kuiz</a>
+                <a>{takeText}</a>
             </Link>
             </h2>
             <h2>
             <Link href="kuiz-results">
-                <a>Kuiz results</a>
+                <a>{resultsText}</a>
             </Link>
             </h2>
                 
