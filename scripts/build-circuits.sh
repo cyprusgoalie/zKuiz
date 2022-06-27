@@ -29,3 +29,4 @@ cp verifier.sol ../contracts/semaphore/Verifier.sol
 cp verification_key.json ../zkeyFiles/verification_key.json
 cp semaphore_js/semaphore.wasm ../zkeyFiles/semaphore.wasm
 cp semaphore_final.zkey ../zkeyFiles/semaphore_final.zkey
+
